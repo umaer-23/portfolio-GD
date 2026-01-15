@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umaer Islam | Visual Designer & Brand Strategist</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Umaer Islam - Expert Visual Designer specializing in Brand Identity, Logo Design, Social Media Graphics, and Print Packaging. Transform your brand with high-impact visuals.">
+    <meta name="keywords" content="Umaer Islam, Visual Designer, Graphic Designer, Brand Identity, Logo Design, Social Media Graphics, Packaging Design, Creative Director, yourumaer">
+    <meta name="author" content="Umaer Islam">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yourumaer.xyz/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourumaer.xyz/">
+    <meta property="og:title" content="Umaer Islam | Visual Designer & Brand Strategist">
+    <meta property="og:description" content="Crafting digital experiences that matter. Specialized in Brand Identity, Social Media, and Print Design. View the portfolio.">
+    <meta property="og:image" content="https://yourumaer.xyz/og-image.jpg"> <!-- Ensure you have an image for sharing -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourumaer.xyz/">
+    <meta property="twitter:title" content="Umaer Islam | Visual Designer">
+    <meta property="twitter:description" content="Crafting digital experiences that matter. Specialized in Brand Identity, Social Media, and Print Design.">
+    <meta property="twitter:image" content="https://yourumaer.xyz/og-image.jpg">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Umaer Islam",
+      "url": "https://yourumaer.xyz",
+      "image": "https://yourumaer.xyz/Me.jpg",
+      "jobTitle": "Visual Designer",
+      "description": "Visual Designer specializing in Brand Identity, Social Media, and Packaging Design.",
+      "knowsAbout": ["Graphic Design", "Brand Identity", "Adobe Photoshop", "Adobe Illustrator", "Figma", "Video Editing"],
+      "sameAs": [
+        "https://www.facebook.com/", 
+        "https://www.linkedin.com/",
+        "https://www.instagram.com/",
+        "https://dribbble.com/",
+        "https://www.behance.net/"
+      ]
+    }
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        cosmic: {
+                            900: '#02010A', // Obsidian Violet (Premium Dark)
+                            800: '#0D0616', // Deep Plum Panel
+                            700: '#1A0B2E', // Lighter Plum
+                            200: '#E9D5FF', // Mist White
+                        },
+                        nebula: {
+                            400: '#C084FC', // Lavender
+                            500: '#9333EA', // Royal Purple (Primary)
+                            600: '#7E22CE', // Deep Royal
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 20s infinite alternate', /* Much smoother, slower blobs */
+                        'scroll': 'scroll 40s linear infinite',
+                        'fade-in-up': 'fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards', /* Premium ease-out */
+                        'spin-slow': 'spin 20s linear infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        scroll: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Utilities for Glassmorphism & Scrollbar */
+        body {
+            background-color: #02010A; /* Premium Obsidian */
+            color: #E9D5FF;
+            overflow-x: hidden;
+        }
+        
+        .glass-panel {
+            background: rgba(13, 6, 22, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); /* Smooth transition */
+        }
+
+        .glass-card {
+            background: rgba(13, 6, 22, 0.5); 
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(147, 51, 234, 0.15);
+            border-left: 4px solid #9333EA;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); /* Smooth hover effect */
+        }
+
+        .glass-card:hover {
+            border-color: rgba(192, 132, 252, 0.4);
+            border-left-color: #D8B4FE;
+            background: rgba(26, 11, 46, 0.8);
+            transform: translateY(-8px); /* Slightly higher lift */
+            box-shadow: 0 30px 60px -15px rgba(126, 34, 206, 0.3);
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #02010A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #261A3D;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9333EA;
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(135deg, #E9D5FF 0%, #C084FC 50%, #9333EA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0px 0px 20px rgba(192, 132, 252, 0.3);
+        }
+        
+        .pause-hover:hover {
+            animation-play-state: paused;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* 3D Transform for Card Deck */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-nebula-500 selection:text-white">
+
+    <!-- PRELOADER -->
+    <div id="preloader" class="fixed inset-0 z-[100] bg-[#02010A] flex flex-col items-center justify-center transition-opacity duration-1000">
+        <!-- Glowing Center -->
+        <div class="relative w-32 h-32 mb-10">
+            <div class="absolute inset-0 rounded-full border-t-2 border-nebula-500 animate-[spin_1s_linear_infinite]"></div>
+            <div class="absolute inset-2 rounded-full border-r-2 border-fuchsia-500 animate-[spin_2s_linear_infinite_reverse]"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-3xl font-bold text-white animate-pulse">UI</span>
+            </div>
+            <!-- Glow Effect -->
+            <div class="absolute inset-0 bg-nebula-500/20 rounded-full blur-xl animate-pulse"></div>
+        </div>
+        
+        <!-- Loading Text -->
+        <div class="flex flex-col items-center gap-2">
+            <span class="text-nebula-400 font-mono text-xs tracking-[0.3em] uppercase animate-pulse">System Initializing</span>
+            <div class="w-24 h-1 bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full bg-nebula-500 animate-[width_2s_ease-in-out_infinite]" style="width: 50%"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Liquid Blobs -->
+    <div class="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-900 rounded-full mix-blend-screen filter blur-[120px] opacity-15 animate-blob"></div>
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-indigo-900 rounded-full mix-blend-screen filter blur-[120px] opacity-15 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-32 left-1/3 w-96 h-96 bg-violet-950 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Navigation (Redesigned: Floating Command Console) -->
+    <nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4" aria-label="Main Navigation">
+        <div class="w-full max-w-5xl bg-[#02010A]/80 backdrop-blur-xl border border-white/10 rounded-full shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-white/20 hover:shadow-[0_0_40px_rgba(147,51,234,0.15)]">
+            <div class="px-6 h-16 flex items-center justify-between">
+                
+                <!-- Logo / Call Sign -->
+                <div class="flex-shrink-0 cursor-pointer group flex items-center gap-2" onclick="switchView('home')" role="button" aria-label="Go to Home">
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-nebula-600 to-cosmic-800 flex items-center justify-center border border-white/10 group-hover:rotate-180 transition-transform duration-700">
+                        <i class="fas fa-bezier-curve text-xs text-white"></i>
+                    </div>
+                    <span class="text-lg font-bold tracking-tight text-white hidden sm:block">Umaer<span class="text-nebula-500">.</span></span>
+                </div>
+                
+                <!-- Desktop Command Links -->
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-1 bg-white/5 rounded-full p-1 border border-white/5">
+                        <a href="#home" onclick="switchView('home')" class="px-5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all">Base</a>
+                        <a href="#about" onclick="switchView('home')" class="px-5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all">Profile</a>
+                        <a href="#services" onclick="switchView('home')" class="px-5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all">Services</a>
+                        <a href="#portfolio" onclick="switchView('home')" class="px-5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all">Logs</a>
+                    </div>
+                </div>
+
+                <!-- Action Module -->
+                <div class="flex items-center gap-3">
+                    <button onclick="switchView('home'); document.getElementById('contact').scrollIntoView({behavior: 'smooth'});" class="hidden md:inline-flex items-center justify-center gap-2 px-5 py-2 text-xs font-bold uppercase tracking-wider text-white bg-nebula-600 hover:bg-nebula-500 rounded-full transition-all shadow-[0_0_15px_rgba(147,51,234,0.4)] hover:shadow-[0_0_25px_rgba(147,51,234,0.6)]" aria-label="Go to Contact Section">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                        </span>
+                        Let's Talk
+                    </button>
+
+                    <!-- Mobile Trigger -->
+                    <div class="md:hidden">
+                        <button id="mobile-menu-btn" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-300 hover:text-white transition-colors border border-white/5" aria-label="Toggle Mobile Menu">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Floating Dropdown) -->
+        <div id="mobile-menu" class="hidden absolute top-20 w-[95%] max-w-sm glass-panel rounded-2xl border border-white/10 p-2 shadow-2xl bg-[#02010A]/95 backdrop-blur-xl origin-top animate-fade-in-up">
+            <div class="space-y-1">
+                <a href="#home" onclick="switchView('home')" class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-300 hover:bg-white/10 hover:text-white transition-colors flex items-center gap-3">
+                    <i class="fas fa-home text-xs w-5 text-center text-slate-500"></i> Home
+                </a>
+                <a href="#about" onclick="switchView('home')" class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-300 hover:bg-white/10 hover:text-white transition-colors flex items-center gap-3">
+                    <i class="fas fa-user text-xs w-5 text-center text-slate-500"></i> About
+                </a>
+                <a href="#services" onclick="switchView('home')" class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-300 hover:bg-white/10 hover:text-white transition-colors flex items-center gap-3">
+                    <i class="fas fa-layer-group text-xs w-5 text-center text-slate-500"></i> Services
+                </a>
+                <a href="#portfolio" onclick="switchView('home')" class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-300 hover:bg-white/10 hover:text-white transition-colors flex items-center gap-3">
+                    <i class="fas fa-folder text-xs w-5 text-center text-slate-500"></i> Portfolio
+                </a>
+                <div class="h-px bg-white/10 my-1 mx-2"></div>
+                <a href="#contact" onclick="switchView('contact')" class="block px-4 py-3 rounded-xl text-sm font-bold text-white bg-nebula-600 hover:bg-nebula-500 transition-colors text-center shadow-lg">
+                    Initialize Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <div id="main-view">
+        <!-- Hero Section -->
+        <section id="home" class="relative z-10 min-h-screen flex flex-col justify-center items-center overflow-hidden pt-20 pb-20">
+            
+            <!-- Smart HUD Elements (Corners) - REMOVED "System Online" Bar -->
+            
+            <!-- Main Content Container -->
+            <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+                <!-- Smart Tag -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-nebula-500/20 bg-nebula-500/5 backdrop-blur-md mb-8 animate-fade-in-up">
+                    <span class="text-xs font-semibold text-nebula-300 tracking-wide uppercase">Visual Designer</span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-tight animate-fade-in-up" style="animation-delay: 0.1s;">
+                    <span class="block text-white mb-2">Design with <span class="text-gradient">meaning_</span></span>
+                    <span class="block text-white">Edit with <span class="text-gradient">Impact</span></span>
+                </h1>
+
+                <!-- Subtext -->
+                 <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up font-light" style="animation-delay: 0.2s;">
+                    I construct digital experiences that pull users in. Blending cosmic aesthetics with grounded strategy for high-impact brands.
+                </p>
+
+                <!-- Actions -->
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6 animate-fade-in-up" style="animation-delay: 0.3s;">
+                    <a href="#contact" class="group relative inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-nebula-600 rounded-full hover:bg-nebula-500 transition-all duration-300 shadow-[0_0_25px_rgba(147,51,234,0.4)] hover:shadow-[0_0_40px_rgba(147,51,234,0.6)]" aria-label="Initiate Project">
+                        Initiate Project
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#portfolio" onclick="switchView('home'); document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})" class="group inline-flex items-center justify-center px-8 py-4 text-base font-medium text-slate-300 border border-white/10 rounded-full hover:bg-white/5 hover:border-white/20 transition-all" aria-label="View Portfolio Archives">
+                        <i class="fas fa-folder-open mr-2 text-slate-500 group-hover:text-white transition-colors"></i>
+                        View Archives
+                    </a>
+                </div>
+            </div>
+
+            <!-- Background Smart Geometry -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/5 rounded-full animate-[spin_60s_linear_infinite] pointer-events-none -z-10 opacity-50"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/5 rounded-full animate-[spin_40s_linear_infinite_reverse] pointer-events-none -z-10 opacity-60"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-nebula-500/10 rounded-full animate-pulse pointer-events-none -z-10"></div>
+            
+            <!-- Bottom Indicator -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
+                <i class="fas fa-chevron-down text-slate-600"></i>
+            </div>
+        </section>
+
+        <!-- About Section (Central Node HUD) -->
+        <section id="about" class="relative z-10 py-24 overflow-hidden">
+            <!-- Decorative Background -->
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(circle_at_center,black_30%,transparent_70%)] -z-10"></div>
+            
+            <!-- Connecting Lines (Decorative) -->
+            <div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-nebula-500/20 to-transparent -z-10 hidden lg:block"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 lg:hidden">
+                     <h2 class="text-3xl font-bold">About the <span class="text-gradient">Operator</span></h2>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-12 relative">
+                    
+                    <!-- Left Data Wing (Bio & Philosophy) -->
+                    <div class="w-full lg:w-1/3 flex flex-col gap-8 text-center lg:text-right order-2 lg:order-1">
+                        <!-- Module 1: Identity -->
+                        <div class="glass-panel p-6 rounded-2xl border-r-0 lg:border-r-4 border-nebula-500/50 hover:bg-white/5 transition-all group">
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-nebula-400 transition-colors">Visual Strategist</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                I engineer identities that cut through the noise. My approach blends cosmic creativity with grounded strategy to ensure your brand isn't just seen—it's felt.
+                            </p>
+                        </div>
+
+                        <!-- Module 2: Philosophy -->
+                        <div class="glass-panel p-6 rounded-2xl border-r-0 lg:border-r-4 border-fuchsia-500/50 hover:bg-white/5 transition-all group">
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-fuchsia-400 transition-colors">Core Philosophy</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                "Good design is obvious. Great design is transparent." I build visual systems that work seamlessly in the background to elevate your content.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Center Node (Visual Anchor) -->
+                    <div class="relative order-1 lg:order-2">
+                        <!-- Rotating Rings -->
+                        <div class="absolute inset-0 -m-8 border border-nebula-500/20 rounded-full animate-[spin_10s_linear_infinite]"></div>
+                        <div class="absolute inset-0 -m-4 border border-fuchsia-500/20 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
+                        
+                        <!-- Main Image Container -->
+                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-cosmic-900 border-4 border-white/5 relative z-10 overflow-hidden shadow-[0_0_60px_rgba(147,51,234,0.3)] group">
+                            <img src="Me2.jpg" alt="Umaer Islam - Visual Designer Profile Picture" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <!-- Scanline Overlay -->
+                            <div class="absolute inset-0 bg-[linear-gradient(rgba(18,16,23,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-20 bg-[size:100%_2px,3px_100%] pointer-events-none opacity-50"></div>
+                        </div>
+
+                        <!-- Badge -->
+                        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-cosmic-900 border border-white/10 px-4 py-1 rounded-full z-20 whitespace-nowrap">
+                            <span class="text-xs font-mono text-nebula-400 uppercase tracking-widest">Umaer Islam</span>
+                        </div>
+                    </div>
+
+                    <!-- Right Data Wing (Stats & Traits) -->
+                    <div class="w-full lg:w-1/3 flex flex-col gap-8 text-center lg:text-left order-3">
+                        <!-- Module 3: Metrics -->
+                        <div class="glass-panel p-6 rounded-2xl border-l-0 lg:border-l-4 border-indigo-500/50 hover:bg-white/5 transition-all">
+                            <div class="flex justify-around lg:justify-start lg:gap-8 text-center">
+                                <div>
+                                    <div class="text-3xl font-bold text-white mb-1">1+</div>
+                                    <div class="text-xs text-indigo-400 uppercase tracking-wider">Year Exp</div>
+                                </div>
+                                <div>
+                                    <div class="text-3xl font-bold text-white mb-1">50+</div>
+                                    <div class="text-xs text-indigo-400 uppercase tracking-wider">Projects</div>
+                                </div>
+                                <div>
+                                    <div class="text-3xl font-bold text-white mb-1">10+</div>
+                                    <div class="text-xs text-indigo-400 uppercase tracking-wider">Clients</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Module 4: Stack -->
+                        <div class="glass-panel p-6 rounded-2xl border-l-0 lg:border-l-4 border-cyan-500/50 hover:bg-white/5 transition-all group">
+                            <h3 class="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">Software Stack</h3>
+                            <div class="flex flex-wrap justify-center lg:justify-start gap-2">
+                                <span class="px-3 py-1 rounded-md bg-white/5 text-xs text-slate-300 border border-white/5">Adobe Photoshop</span>
+                                <span class="px-3 py-1 rounded-md bg-white/5 text-xs text-slate-300 border border-white/5">Adobe Illustrator</span>
+                                <span class="px-3 py-1 rounded-md bg-white/5 text-xs text-slate-300 border border-white/5">Premier Pro (Basic)</span>
+                                <span class="px-3 py-1 rounded-md bg-white/5 text-xs text-slate-300 border border-white/5">CapCut</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section (Restored: Creative Arsenal) -->
+        <section id="skills" class="relative z-10 py-20 overflow-hidden bg-cosmic-900/50 border-y border-white/5">
+            <!-- Background Decoration -->
+            <div class="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-nebula-500/10 rounded-full blur-[80px] -z-10"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="text-gradient">Creative Arsenal</span></h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">The core disciplines I wield to make a difference.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                    <!-- Skill 1 -->
+                    <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center text-center gap-4 group hover:bg-cosmic-800/80 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-full bg-nebula-500/10 flex items-center justify-center text-nebula-400 group-hover:text-white group-hover:bg-nebula-500 transition-colors">
+                            <i class="fas fa-pen-nib text-xl"></i>
+                        </div>
+                        <span class="text-slate-300 font-medium group-hover:text-white">Logo Design</span>
+                    </div>
+
+                    <!-- Skill 2 -->
+                    <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center text-center gap-4 group hover:bg-cosmic-800/80 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-full bg-fuchsia-500/10 flex items-center justify-center text-fuchsia-400 group-hover:text-white group-hover:bg-fuchsia-500 transition-colors">
+                            <i class="fas fa-fingerprint text-xl"></i>
+                        </div>
+                        <span class="text-slate-300 font-medium group-hover:text-white">Brand Identity</span>
+                    </div>
+
+                    <!-- Skill 3 -->
+                    <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center text-center gap-4 group hover:bg-cosmic-800/80 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-400 group-hover:text-white group-hover:bg-indigo-500 transition-colors">
+                            <i class="fas fa-image text-xl"></i>
+                        </div>
+                        <span class="text-slate-300 font-medium group-hover:text-white">Posters</span>
+                    </div>
+
+                    <!-- Skill 4 -->
+                    <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center text-center gap-4 group hover:bg-cosmic-800/80 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 group-hover:text-white group-hover:bg-purple-500 transition-colors">
+                            <i class="fas fa-share-nodes text-xl"></i>
+                        </div>
+                        <span class="text-slate-300 font-medium group-hover:text-white">Social Media</span>
+                    </div>
+
+                    <!-- Skill 5 -->
+                    <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center text-center gap-4 group hover:bg-cosmic-800/80 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400 group-hover:text-white group-hover:bg-cyan-500 transition-colors">
+                            <i class="fas fa-print text-xl"></i>
+                        </div>
+                        <span class="text-slate-300 font-medium group-hover:text-white">Print Elements</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Services Section (Holographic Command Deck) -->
+    <section id="services" class="relative z-10 py-24 bg-cosmic-900 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-nebula-900/10 to-transparent pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Services I <span class="text-gradient">Deliver</span></h2>
+                <p class="text-slate-400 text-lg">Hover to activate the holographic service details.</p>
+            </div>
+
+            <!-- Desktop Split Interface (Hidden on Mobile) -->
+            <div class="hidden lg:flex gap-12 items-start relative">
+                
+                <!-- Left Column: Data List -->
+                <div class="w-1/2 flex flex-col">
+                    <!-- List Item 1 -->
+                    <div class="service-trigger group relative p-8 border-b border-white/5 cursor-pointer transition-all duration-300 hover:bg-white/5" onmouseenter="updateService(0)">
+                        <div class="flex items-center justify-between relative z-10">
+                            <div class="flex items-center gap-6">
+                                <span class="text-2xl font-mono text-slate-600 group-hover:text-nebula-500 transition-colors">01</span>
+                                <h3 class="text-3xl font-bold text-slate-300 group-hover:text-white group-hover:translate-x-4 transition-all duration-300">Brand Identity</h3>
+                            </div>
+                            <i class="fas fa-arrow-right text-nebula-500 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                        </div>
+                        <div class="absolute left-0 top-0 w-1 h-full bg-nebula-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-center"></div>
+                    </div>
+
+                    <!-- List Item 2 -->
+                    <div class="service-trigger group relative p-8 border-b border-white/5 cursor-pointer transition-all duration-300 hover:bg-white/5" onmouseenter="updateService(1)">
+                        <div class="flex items-center justify-between relative z-10">
+                            <div class="flex items-center gap-6">
+                                <span class="text-2xl font-mono text-slate-600 group-hover:text-fuchsia-500 transition-colors">02</span>
+                                <h3 class="text-3xl font-bold text-slate-300 group-hover:text-white group-hover:translate-x-4 transition-all duration-300">Social Media</h3>
+                            </div>
+                            <i class="fas fa-arrow-right text-fuchsia-500 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                        </div>
+                        <div class="absolute left-0 top-0 w-1 h-full bg-fuchsia-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-center"></div>
+                    </div>
+
+                    <!-- List Item 3 -->
+                    <div class="service-trigger group relative p-8 border-b border-white/5 cursor-pointer transition-all duration-300 hover:bg-white/5" onmouseenter="updateService(2)">
+                        <div class="flex items-center justify-between relative z-10">
+                            <div class="flex items-center gap-6">
+                                <span class="text-2xl font-mono text-slate-600 group-hover:text-indigo-500 transition-colors">03</span>
+                                <h3 class="text-3xl font-bold text-slate-300 group-hover:text-white group-hover:translate-x-4 transition-all duration-300">Print & Pack</h3>
+                            </div>
+                            <i class="fas fa-arrow-right text-indigo-500 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                        </div>
+                        <div class="absolute left-0 top-0 w-1 h-full bg-indigo-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-center"></div>
+                    </div>
+
+                    <!-- List Item 4 -->
+                    <div class="service-trigger group relative p-8 border-b border-white/5 cursor-pointer transition-all duration-300 hover:bg-white/5" onmouseenter="updateService(3)">
+                        <div class="flex items-center justify-between relative z-10">
+                            <div class="flex items-center gap-6">
+                                <span class="text-2xl font-mono text-slate-600 group-hover:text-cyan-500 transition-colors">04</span>
+                                <h3 class="text-3xl font-bold text-slate-300 group-hover:text-white group-hover:translate-x-4 transition-all duration-300">Marketing</h3>
+                            </div>
+                            <i class="fas fa-arrow-right text-cyan-500 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                        </div>
+                        <div class="absolute left-0 top-0 w-1 h-full bg-cyan-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-center"></div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Holographic Viewport (Sticky) -->
+                <div class="w-1/2 sticky top-32">
+                    <div class="glass-panel p-1 rounded-3xl relative overflow-hidden group shadow-2xl">
+                        <!-- Scanline Effect -->
+                        <div class="absolute inset-0 bg-[linear-gradient(rgba(18,16,23,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-20 bg-[size:100%_2px,3px_100%] pointer-events-none"></div>
+                        
+                        <div class="bg-cosmic-900/80 backdrop-blur-xl rounded-[1.3rem] p-10 h-[450px] flex flex-col justify-center relative overflow-hidden">
+                            <!-- Dynamic Content Container -->
+                            <div id="service-content" class="relative z-30 transition-all duration-500 ease-in-out opacity-100 transform translate-y-0">
+                                <div id="service-icon-container" class="w-20 h-20 rounded-2xl bg-nebula-500/20 flex items-center justify-center text-nebula-400 text-4xl mb-8 border border-nebula-500/30">
+                                    <i class="fas fa-fingerprint"></i>
+                                </div>
+                                <h3 id="service-title" class="text-4xl font-bold text-white mb-4">Brand Identity</h3>
+                                <p id="service-desc" class="text-slate-300 text-lg leading-relaxed mb-8">
+                                    We define the DNA of your visual presence. From logo construction to comprehensive style guides, we ensure your brand speaks clearly.
+                                </p>
+                                <div id="service-tags" class="flex flex-wrap gap-3">
+                                    <span class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-slate-300">Logo Design</span>
+                                    <span class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-slate-300">Typography</span>
+                                    <span class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-slate-300">Style Guides</span>
+                                </div>
+                            </div>
+
+                            <!-- Decorative Background Glow -->
+                            <div id="service-glow" class="absolute -top-20 -right-20 w-80 h-80 bg-nebula-500/20 rounded-full blur-[100px] transition-colors duration-500"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile View (Stacked Cards) -->
+            <div class="lg:hidden space-y-6">
+                 <!-- Service 1 -->
+                <div class="glass-card p-8 rounded-2xl border border-white/5 relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-nebula-500/20 rounded-full blur-[50px]"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 rounded-xl bg-nebula-500/20 flex items-center justify-center text-nebula-400 text-2xl mb-6">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Brand Identity</h3>
+                        <p class="text-slate-400 mb-6">We define the DNA of your visual presence. From logo construction to comprehensive style guides.</p>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="glass-card p-8 rounded-2xl border border-white/5 relative overflow-hidden">
+                     <div class="relative z-10">
+                        <div class="w-14 h-14 rounded-xl bg-fuchsia-500/20 flex items-center justify-center text-fuchsia-400 text-2xl mb-6">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Social Media</h3>
+                        <p class="text-slate-400 mb-6">Engaging posts, banners, and stories designed to stop the scroll.</p>
+                    </div>
+                </div>
+                 <!-- Service 3 -->
+                 <div class="glass-card p-8 rounded-2xl border border-white/5 relative overflow-hidden">
+                    <div class="relative z-10">
+                       <div class="w-14 h-14 rounded-xl bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-2xl mb-6">
+                           <i class="fas fa-box-open"></i>
+                       </div>
+                       <h3 class="text-2xl font-bold text-white mb-3">Print & Pack</h3>
+                       <p class="text-slate-400 mb-6">Tangible design assets including brochures, flyers, and product packaging.</p>
+                   </div>
+               </div>
+                <!-- Service 4 -->
+                <div class="glass-card p-8 rounded-2xl border border-white/5 relative overflow-hidden">
+                    <div class="relative z-10">
+                       <div class="w-14 h-14 rounded-xl bg-cyan-500/20 flex items-center justify-center text-cyan-400 text-2xl mb-6">
+                           <i class="fas fa-bullhorn"></i>
+                       </div>
+                       <h3 class="text-2xl font-bold text-white mb-3">Marketing</h3>
+                       <p class="text-slate-400 mb-6">High-conversion visuals for digital campaigns and advertising.</p>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section (Redesigned: Smart Tri-Node Interface) -->
+    <section id="portfolio" class="relative z-10 py-24 bg-[#02010A] border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="mb-16 text-center max-w-2xl mx-auto">
+                <div class="inline-flex items-center gap-2 mb-4 text-nebula-400 font-mono text-xs tracking-[0.2em] uppercase">
+                    <span class="w-2 h-2 bg-nebula-500 rounded-full animate-pulse shadow-[0_0_10px_#8b5cf6]"></span>
+                    Priority Access
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Active <span class="text-gradient">Protocols</span></h2>
+                <p class="text-slate-400 text-lg">High-priority visual systems currently deployed in the field.</p>
+            </div>
+
+            <!-- Smart Grid (3 Items) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Project 01: Oriental Tex Int -->
+                <div class="group relative bg-cosmic-800 rounded-2xl overflow-hidden border border-white/5 hover:border-nebula-500/50 transition-all duration-500 hover:-translate-y-2 cursor-pointer shadow-lg hover:shadow-nebula-500/10">
+                    <!-- Image Area -->
+                    <div class="relative aspect-[0.87] overflow-hidden">
+                        <img src="Branding-1.jpg" alt="Oriental Tex Int - Brand Identity Design by Umaer Islam" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        
+                        <!-- Smart Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-cosmic-900 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                        
+                        <!-- Tech Data Overlay -->
+                        <div class="absolute top-0 left-0 w-full p-6 flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-y-2 group-hover:translate-y-0">
+                            <span class="px-2 py-1 bg-black/60 backdrop-blur-md border border-white/10 rounded text-[10px] font-mono text-nebula-400 tracking-widest uppercase">ID: OTI_25</span>
+                            <div class="w-2 h-2 bg-green-500 rounded-full shadow-[0_0_10px_#22c55e] animate-pulse"></div>
+                        </div>
+
+                        <!-- Scanline Effect on Hover -->
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-nebula-500/10 to-transparent translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-1000 ease-in-out pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content Panel -->
+                    <div class="absolute bottom-0 left-0 w-full p-6">
+                        <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <span class="text-xs font-mono text-nebula-400 uppercase tracking-widest mb-1 block">Brand Identity</span>
+                            <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-nebula-100 transition-colors">Oriental Tex Int</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75">Comprehensive brand identity system for textile innovation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 02: Freeland -->
+                <div class="group relative bg-cosmic-800 rounded-2xl overflow-hidden border border-white/5 hover:border-fuchsia-500/50 transition-all duration-500 hover:-translate-y-2 cursor-pointer shadow-lg hover:shadow-fuchsia-500/10">
+                    <div class="relative aspect-[0.87] overflow-hidden">
+                        <img src="Poster-1.jpg" alt="Freeland Event Poster Design by Umaer Islam" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-cosmic-900 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                        
+                        <div class="absolute top-0 left-0 w-full p-6 flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-y-2 group-hover:translate-y-0">
+                            <span class="px-2 py-1 bg-black/60 backdrop-blur-md border border-white/10 rounded text-[10px] font-mono text-fuchsia-400 tracking-widest uppercase">ID: FL_ART</span>
+                            <div class="w-2 h-2 bg-green-500 rounded-full shadow-[0_0_10px_#22c55e] animate-pulse"></div>
+                        </div>
+                        
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-fuchsia-500/10 to-transparent translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-1000 ease-in-out pointer-events-none"></div>
+                    </div>
+                    
+                    <div class="absolute bottom-0 left-0 w-full p-6">
+                        <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <span class="text-xs font-mono text-fuchsia-400 uppercase tracking-widest mb-1 block">Poster Design</span>
+                            <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-fuchsia-100 transition-colors">Freeland</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75">High-impact visual composition for event promotion.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 03: BLDS -->
+                <div class="group relative bg-cosmic-800 rounded-2xl overflow-hidden border border-white/5 hover:border-indigo-500/50 transition-all duration-500 hover:-translate-y-2 cursor-pointer shadow-lg hover:shadow-indigo-500/10">
+                    <div class="relative aspect-[0.87] overflow-hidden">
+                        <img src="Branding-2.jpg" alt="BLDS Corporate Brand Identity by Umaer Islam" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-cosmic-900 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                        
+                        <div class="absolute top-0 left-0 w-full p-6 flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-y-2 group-hover:translate-y-0">
+                            <span class="px-2 py-1 bg-black/60 backdrop-blur-md border border-white/10 rounded text-[10px] font-mono text-indigo-400 tracking-widest uppercase">ID: BLDS_ID</span>
+                            <div class="w-2 h-2 bg-green-500 rounded-full shadow-[0_0_10px_#22c55e] animate-pulse"></div>
+                        </div>
+
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-500/10 to-transparent translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-1000 ease-in-out pointer-events-none"></div>
+                    </div>
+                    
+                    <div class="absolute bottom-0 left-0 w-full p-6">
+                        <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest mb-1 block">Brand Identity</span>
+                            <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-indigo-100 transition-colors">BLDS</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75">Corporate identity design focused on modern minimalism.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <!-- Contact Section (Redesigned: Holographic Contact HUD) -->
+        <section id="contact" class="relative z-10 py-24 overflow-hidden">
+            <!-- Background Decor -->
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-t from-nebula-900/20 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-nebula-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- The HUD Interface -->
+                <div class="relative group">
+                    <!-- Outer Glow -->
+                    <div class="absolute -inset-1 bg-gradient-to-b from-nebula-500/20 via-fuchsia-500/20 to-transparent rounded-[2.5rem] blur opacity-50 transition duration-1000 group-hover:opacity-75"></div>
+                    
+                    <!-- Main Glass Chassis -->
+                    <div class="relative bg-[#02010A] border border-white/10 rounded-[2.5rem] overflow-hidden">
+                        <!-- Top Status Bar -->
+                        <div class="h-12 border-b border-white/5 bg-white/[0.02] flex items-center justify-between px-8">
+                            <div class="flex items-center gap-4">
+                                <div class="flex gap-2">
+                                    <div class="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
+                                </div>
+                                <span class="text-[10px] font-mono text-slate-500 uppercase tracking-widest hidden sm:block">Comm_Link_v4.2</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_#22c55e]"></span>
+                                <span class="text-[10px] font-mono text-green-400 uppercase tracking-widest">Encryption: ON</span>
+                            </div>
+                        </div>
+
+                        <!-- Interface Content -->
+                        <div class="grid lg:grid-cols-12 min-h-[500px]">
+                            
+                            <!-- Left: Main Transmission (Email) -->
+                            <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/5 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-nebula-500/5 radial-gradient-center"></div>
+                                
+                                <!-- FORM STATE -->
+                                <div id="contact-form-wrapper" class="relative z-10 max-w-lg transition-all duration-500 ease-in-out">
+                                    <span class="text-nebula-400 font-mono text-xs uppercase tracking-[0.2em] mb-4 block">Primary Channel</span>
+                                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">Let's Build the <br><span class="text-gradient">Future</span>.</h2>
+                                    
+                                    <!-- Tactical Input Form -->
+                                    <div class="space-y-5 mb-8">
+                                        <div>
+                                            <label for="transmission-name" class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2 block">Identity</label>
+                                            <input type="text" id="transmission-name" placeholder="Your Name / Organization" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-nebula-500 focus:bg-white/10 transition-all font-mono text-sm">
+                                        </div>
+                                        <div>
+                                            <label for="transmission-contact" class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2 block">Contact Coordinates</label>
+                                            <input type="text" id="transmission-contact" placeholder="Email Address or Phone Number" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-nebula-500 focus:bg-white/10 transition-all font-mono text-sm">
+                                        </div>
+                                        <div>
+                                            <label for="transmission-subject" class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2 block">Subject Protocol</label>
+                                            <input type="text" id="transmission-subject" placeholder="Project Name / Topic" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-nebula-500 focus:bg-white/10 transition-all font-mono text-sm">
+                                        </div>
+                                        <div>
+                                            <label for="transmission-message" class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2 block">Message Data</label>
+                                            <textarea id="transmission-message" rows="3" placeholder="Brief description of your mission parameters..." class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-nebula-500 focus:bg-white/10 transition-all font-mono text-sm resize-none"></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    <button onclick="sendTransmission()" id="send-btn" class="group/btn relative inline-flex items-center gap-4 px-8 py-4 bg-white text-black rounded-full font-bold hover:bg-nebula-400 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_40px_rgba(147,51,234,0.5)] cursor-pointer w-full sm:w-auto justify-center" aria-label="Send Email">
+                                        <span>Send Transmission</span>
+                                        <i class="fas fa-paper-plane transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform"></i>
+                                    </button>
+                                </div>
+
+                                <!-- SUCCESS STATE (Hidden Initially) -->
+                                <div id="contact-success-wrapper" class="hidden relative z-10 max-w-lg w-full flex-col justify-center items-center text-center animate-fade-in-up">
+                                    <div class="w-24 h-24 rounded-full bg-green-500/10 flex items-center justify-center text-green-400 text-4xl mb-6 border border-green-500/20 shadow-[0_0_40px_rgba(34,197,94,0.2)]">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <h3 class="text-3xl font-bold text-white mb-4">Transmission Sent</h3>
+                                    <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                                        Your signal has been successfully intercepted. I will decode your message and establish a connection shortly.
+                                    </p>
+                                    <button onclick="resetContactForm()" class="px-8 py-3 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-white font-medium transition-all hover:border-white/20">
+                                        Send Another
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Right: Quick Links Grid -->
+                            <div class="lg:col-span-5 bg-white/[0.02] grid grid-rows-4 divide-y divide-white/5">
+                                
+                                <!-- Link 1: WhatsApp -->
+                                <a href="https://wa.me/1234567890" class="group relative flex items-center justify-between p-6 hover:bg-green-500/10 transition-colors cursor-pointer" aria-label="Chat on WhatsApp">
+                                    <div class="flex items-center gap-6">
+                                        <div class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400 text-2xl border border-green-500/30 group-hover:bg-green-500 group-hover:text-white transition-all">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white font-bold group-hover:text-green-300 transition-colors">WhatsApp</h4>
+                                            <span class="text-xs font-mono text-slate-500">Live Chat</span>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-chevron-right text-slate-600 group-hover:text-green-400 group-hover:translate-x-1 transition-transform"></i>
+                                </a>
+
+                                <!-- Link 2: Phone -->
+                                <a href="tel:+880 1870-267949" class="group relative flex items-center justify-between p-6 hover:bg-nebula-500/10 transition-colors cursor-pointer" aria-label="Call Now">
+                                    <div class="flex items-center gap-6">
+                                        <div class="w-12 h-12 rounded-xl bg-nebula-500/20 flex items-center justify-center text-nebula-400 text-xl border border-nebula-500/30 group-hover:bg-nebula-500 group-hover:text-white transition-all">
+                                            <i class="fas fa-phone-alt"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white font-bold group-hover:text-nebula-300 transition-colors">Voice Line</h4>
+                                            <span class="text-xs font-mono text-slate-500">Priority Call</span>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-chevron-right text-slate-600 group-hover:text-nebula-400 group-hover:translate-x-1 transition-transform"></i>
+                                </a>
+
+                                <!-- Link 3: Facebook -->
+                                <a href="https://www.facebook.com/designer.umaer" class="group relative flex items-center justify-between p-6 hover:bg-blue-500/10 transition-colors cursor-pointer" aria-label="Visit Facebook">
+                                    <div class="flex items-center gap-6">
+                                        <div class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 text-xl border border-blue-500/30 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white font-bold group-hover:text-blue-300 transition-colors">Facebook</h4>
+                                            <span class="text-xs font-mono text-slate-500">Social Feed</span>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-chevron-right text-slate-600 group-hover:text-blue-400 group-hover:translate-x-1 transition-transform"></i>
+                                </a>
+
+                                <!-- Link 4: Email (Added) -->
+                                <a href="mailto:umaerislam23@gmail.com" class="group relative flex items-center justify-between p-6 hover:bg-fuchsia-500/10 transition-colors cursor-pointer" aria-label="Email Directly">
+                                    <div class="flex items-center gap-6">
+                                        <div class="w-12 h-12 rounded-xl bg-fuchsia-500/20 flex items-center justify-center text-fuchsia-400 text-xl border border-fuchsia-500/30 group-hover:bg-fuchsia-500 group-hover:text-white transition-all">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white font-bold group-hover:text-fuchsia-300 transition-colors">Email</h4>
+                                            <span class="text-xs font-mono text-slate-500">Direct Uplink</span>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-chevron-right text-slate-600 group-hover:text-fuchsia-400 group-hover:translate-x-1 transition-transform"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                        
+                        <!-- Bottom Decoration -->
+                        <div class="h-2 bg-gradient-to-r from-nebula-500 via-fuchsia-500 to-indigo-500 opacity-50"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> <!-- End Main View -->
+
+    <!-- MISSION ARCHIVES VIEW (Second Page - Single File) -->
+    <div id="projects-view" class="hidden min-h-screen pt-32 pb-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 pb-8 border-b border-white/10">
+                <div>
+                    <div class="flex items-center gap-2 mb-4 cursor-pointer hover:text-nebula-400 transition-colors" onclick="switchView('home')">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="text-sm font-medium uppercase tracking-wider">Return to Base</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Mission <span class="text-gradient">Archives</span></h1>
+                    <p class="text-slate-400 text-lg">A comprehensive log of all deployed visual assets.</p>
+                </div>
+                
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-2 mt-6 md:mt-0">
+                    <button class="px-4 py-2 rounded-full bg-nebula-500 text-white text-sm font-medium">All Systems</button>
+                    <button class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 text-sm transition-colors">Identity</button>
+                    <button class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 text-sm transition-colors">Social</button>
+                    <button class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 text-sm transition-colors">Print</button>
+                </div>
+            </div>
+
+            <!-- Extended Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-cosmic-800 border border-white/10 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-violet-900 to-black group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 flex items-center justify-center text-6xl text-white/10"><i class="fas fa-vector-square"></i></div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-nebula-400 text-xs font-bold uppercase mb-2">Identity</span>
+                        <h3 class="text-xl font-bold text-white">Neon Tech Rebrand</h3>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-cosmic-800 border border-white/10 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-fuchsia-900 to-black group-hover:scale-110 transition-transform duration-500">
+                         <div class="absolute inset-0 flex items-center justify-center text-6xl text-white/10"><i class="fas fa-coffee"></i></div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-fuchsia-400 text-xs font-bold uppercase mb-2">Packaging</span>
+                        <h3 class="text-xl font-bold text-white">Luna Coffee Co.</h3>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-cosmic-800 border border-white/10 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-900 to-black group-hover:scale-110 transition-transform duration-500">
+                         <div class="absolute inset-0 flex items-center justify-center text-6xl text-white/10"><i class="fas fa-mobile-alt"></i></div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-indigo-400 text-xs font-bold uppercase mb-2">UI/UX</span>
+                        <h3 class="text-xl font-bold text-white">Fitness App</h3>
+                    </div>
+                </div>
+
+                <!-- Project 4 (New) -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-cosmic-800 border border-white/10 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-900 to-black group-hover:scale-110 transition-transform duration-500">
+                         <div class="absolute inset-0 flex items-center justify-center text-6xl text-white/10"><i class="fas fa-sun"></i></div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-cyan-400 text-xs font-bold uppercase mb-2">Branding</span>
+                        <h3 class="text-xl font-bold text-white">Solaris Energy</h3>
+                    </div>
+                </div>
+
+                <!-- Project 5 (New) -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-cosmic-800 border border-white/10 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-rose-900 to-black group-hover:scale-110 transition-transform duration-500">
+                         <div class="absolute inset-0 flex items-center justify-center text-6xl text-white/10"><i class="fas fa-motorcycle"></i></div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-rose-400 text-xs font-bold uppercase mb-2">Social Media</span>
+                        <h3 class="text-xl font-bold text-white">Velocity Moto</h3>
+                    </div>
+                </div>
+
+                 <!-- Project 6 (New) -->
+                 <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-cosmic-800 border border-white/10 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-900 to-black group-hover:scale-110 transition-transform duration-500">
+                         <div class="absolute inset-0 flex items-center justify-center text-6xl text-white/10"><i class="fas fa-leaf"></i></div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-emerald-400 text-xs font-bold uppercase mb-2">Print</span>
+                        <h3 class="text-xl font-bold text-white">Zenith Spa</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                 <p class="text-slate-500 mb-4">End of Transmission</p>
+                 <button onclick="switchView('home')" class="px-6 py-2 rounded-full border border-white/10 hover:bg-white/5 transition-colors text-sm">Return to Home</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Minimal & Sleek) -->
+    <footer class="relative z-10 bg-[#02010A] border-t border-white/5 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            
+            <!-- Brand & Copyright -->
+            <div class="flex items-center gap-3">
+                <span class="text-lg font-bold text-white tracking-tight">Umaer<span class="text-nebula-500">.</span></span>
+                <span class="h-4 w-px bg-white/10"></span>
+                <p class="text-slate-500 text-xs font-mono uppercase tracking-wide">© 2024 All Rights Reserved.</p>
+            </div>
+
+            <!-- Social Uplink (Compact) -->
+            <div class="flex items-center gap-6">
+                <a href="https://www.facebook.com/designer.umaer" class="text-slate-500 hover:text-white transition-colors text-lg" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/8801870267949" class="text-slate-500 hover:text-white transition-colors text-lg" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:umaerislam23@gmail.com" class="text-slate-500 hover:text-white transition-colors text-lg" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        // Loading Screen Logic
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if(preloader){
+                setTimeout(() => {
+                    preloader.style.opacity = '0';
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                    }, 1000);
+                }, 1500); // Wait for 1.5s before fading out
+            }
+        });
+
+        // View Switching Logic (SPA)
+        function switchView(viewName) {
+            const mainView = document.getElementById('main-view');
+            const projectsView = document.getElementById('projects-view');
+            
+            if (!mainView || !projectsView) return;
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (viewName === 'projects') {
+                mainView.classList.add('hidden');
+                projectsView.classList.remove('hidden');
+            } else {
+                projectsView.classList.add('hidden');
+                mainView.classList.remove('hidden');
+            }
+        }
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    entry.target.style.opacity = "1";
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Only observe main headings for scroll triggers
+        document.querySelectorAll('h1, h2, .animate-fade-in-up').forEach(el => observer.observe(el));
+
+
+        // Service Deck Logic
+        const services = [
+            {
+                title: "Brand Identity",
+                desc: "We define the DNA of your visual presence. From logo construction to comprehensive style guides, we ensure your brand speaks clearly.",
+                icon: "fa-fingerprint",
+                color: "nebula",
+                hex: "#8B5CF6",
+                tags: ["Logo Design", "Typography", "Style Guides"]
+            },
+            {
+                title: "Social Media",
+                desc: "Engaging posts, banners, and stories designed to stop the scroll. Content that converts viewers into followers.",
+                icon: "fa-hashtag",
+                color: "fuchsia",
+                hex: "#d946ef",
+                tags: ["Instagram Grids", "Ad Creatives", "Stories"]
+            },
+            {
+                title: "Print & Packaging",
+                desc: "Tangible design assets including brochures, flyers, and product packaging. Design you can feel.",
+                icon: "fa-box-open",
+                color: "indigo",
+                hex: "#6366f1",
+                tags: ["Product Boxes", "Merchandise", "Flyers"]
+            },
+            {
+                title: "Marketing",
+                desc: "High-conversion visuals for digital campaigns and advertising. We design to drive action.",
+                icon: "fa-bullhorn",
+                color: "cyan",
+                hex: "#06b6d4",
+                tags: ["Digital Banners", "Campaigns", "Posters"]
+            }
+        ];
+
+        function updateService(index) {
+            const service = services[index];
+            const titleEl = document.getElementById('service-title');
+            const descEl = document.getElementById('service-desc');
+            const iconContainer = document.getElementById('service-icon-container');
+            const tagsContainer = document.getElementById('service-tags');
+            const glowEl = document.getElementById('service-glow');
+            const contentEl = document.getElementById('service-content');
+
+            if (!titleEl || !descEl || !iconContainer || !tagsContainer || !glowEl || !contentEl) return;
+
+            // Fade out slightly
+            contentEl.style.opacity = '0.5';
+            contentEl.style.transform = 'translateY(10px)';
+
+            setTimeout(() => {
+                // Update Content
+                titleEl.textContent = service.title;
+                descEl.textContent = service.desc;
+                
+                // Update Icon & Colors
+                iconContainer.className = `w-20 h-20 rounded-2xl bg-${service.color}-500/20 flex items-center justify-center text-${service.color}-400 text-4xl mb-8 border border-${service.color}-500/30 transition-all duration-300`;
+                iconContainer.innerHTML = `<i class="fas ${service.icon}"></i>`;
+                
+                // Update Glow
+                glowEl.className = `absolute -top-20 -right-20 w-80 h-80 bg-${service.color}-500/20 rounded-full blur-[100px] transition-colors duration-500`;
+
+                // Update Tags
+                tagsContainer.innerHTML = service.tags.map(tag => 
+                    `<span class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-slate-300">${tag}</span>`
+                ).join('');
+
+                // Fade in
+                contentEl.style.opacity = '1';
+                contentEl.style.transform = 'translateY(0)';
+            }, 150);
+        }
+
+        // Contact Transmission Logic (Updated with SheetDB API and Smooth Transition)
+        async function sendTransmission() {
+            const nameInput = document.getElementById('transmission-name');
+            const contactInput = document.getElementById('transmission-contact');
+            const subjectInput = document.getElementById('transmission-subject');
+            const messageInput = document.getElementById('transmission-message');
+            
+            const name = nameInput.value;
+            const contact = contactInput.value;
+            const subject = subjectInput.value;
+            const message = messageInput.value;
+            
+            const btn = document.getElementById('send-btn');
+            const originalContent = `<span>Send Transmission</span><i class="fas fa-paper-plane transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform"></i>`;
+
+            // Simple validation feedback
+            if (!name || !contact) {
+                const prevText = btn.innerHTML;
+                btn.innerHTML = `<span class="text-red-600">Identity & Contact Req.</span>`;
+                setTimeout(() => btn.innerHTML = prevText, 2000);
+                return;
+            }
+
+            // Loading State
+            btn.innerHTML = `<span>Transmitting...</span><i class="fas fa-circle-notch fa-spin"></i>`;
+            btn.style.pointerEvents = 'none'; // Disable clicks
+
+            // Data payload matches typical Sheet columns
+            const payload = {
+                data: {
+                    "Name": name,
+                    "Contact": contact,
+                    "Subject": subject,
+                    "Message": message,
+                    "Date": "'" + new Date().toLocaleString()
+                }
+            };
+
+            try {
+                const response = await fetch('https://sheetdb.io/api/v1/fk7wdnn0an7mo', {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    // --- SUCCESS TRANSITION START ---
+                    const formWrapper = document.getElementById('contact-form-wrapper');
+                    const successWrapper = document.getElementById('contact-success-wrapper');
+                    
+                    // 1. Fade out form
+                    formWrapper.style.opacity = '0';
+                    formWrapper.style.transform = 'translateY(-20px)';
+                    
+                    setTimeout(() => {
+                        // 2. Hide form, Show success
+                        formWrapper.classList.add('hidden');
+                        successWrapper.classList.remove('hidden');
+                        successWrapper.style.display = 'flex'; // Ensure centering overrides any class
+                        
+                        // 3. Clear inputs
+                        nameInput.value = '';
+                        contactInput.value = '';
+                        subjectInput.value = '';
+                        messageInput.value = '';
+                        
+                        // 4. Reset Button state (for next time)
+                        btn.innerHTML = originalContent;
+                        btn.style.pointerEvents = 'auto';
+                    }, 500); // Wait for transition to finish
+                    // --- SUCCESS TRANSITION END ---
+
+                } else {
+                    throw new Error('Network response was not ok.');
+                }
+            } catch (error) {
+                // Error State
+                console.error("Transmission Error:", error);
+                btn.innerHTML = `<span class="text-red-600">Signal Lost</span><i class="fas fa-times text-red-600"></i>`;
+                // Restore button after delay
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.style.pointerEvents = 'auto';
+                }, 3000);
+            }
+        }
+
+        // Function to reset the form view (Send Another)
+        function resetContactForm() {
+            const formWrapper = document.getElementById('contact-form-wrapper');
+            const successWrapper = document.getElementById('contact-success-wrapper');
+            
+            // Hide success - Important: Clear inline display style from previous step
+            successWrapper.style.display = 'none'; 
+            successWrapper.classList.add('hidden');
+            
+            // Show form
+            formWrapper.classList.remove('hidden');
+            
+            // Allow browser paint, then fade in
+            setTimeout(() => {
+                formWrapper.style.opacity = '1';
+                formWrapper.style.transform = 'translateY(0)';
+            }, 50);
+        }
+
+    </script>
+</body>
+</html>
